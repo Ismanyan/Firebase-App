@@ -1,0 +1,86 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/login.css" />
+  <link rel="stylesheet" href="css/crud.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Firebase Web login Example</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+  </div>
+
+<!-- ON lOGIN -->
+  <div id="crud">
+
+    <h1>Firebase CRUD with Javascript
+      <br/><small><em>User App</em></small>
+      <button onclick="logout()">Logout</button>
+    </h1>
+
+    <!-- add user module -->
+    <section id="add-user-module" >
+        <button id="open-add-user-form-btn">+</button>
+        <form>
+            <h2>Add User</h2>
+            name:<br>
+            <input type='text' data-key='name' class='user-input'><br>
+            no hp:<br>
+            <input type='text' data-key='hp' class='user-input'><br>
+            email:<br>
+            <input type='email' data-key='email' class='user-input'><br>
+            pesan:<br>
+            <input type='text' data-key='pesan' class='user-input'><br>
+            <button type='button' id="add-user-btn">add user</button>
+        </form>
+    </section>
+
+    <!-- edit user module -->
+    <section id="edit-user-module">
+        <form>
+            <h2>Edit user</h2>
+            <input type="hidden" class="edit-userid">
+            name:<br>
+            <input type='text' data-key='name' class='edit-user-input'><br>
+            no hp:<br>
+            <input type='text' data-key='hp' class='edit-user-input'><br>
+            email:<br>
+            <input type='email' data-key='email' class='edit-user-input'><br>
+            pesan:<br>
+            <input type='text' data-key='pesan' class='edit-user-input'><br>
+            <button type='button' id="edit-user-btn">save</button>
+            <button type='button' id="edit-user-btn-cancel">Cancel</button>
+        </form>
+    </section>
+
+    <!-- show user module -->
+    <ul id="user-list"></ul>
+    <div id="user-detail"></div>
+
+  </div>
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyCtluWB5sqUT3kVY7cJrdZiRxfPpvLQ5R8",
+      authDomain: "ismanyan.firebaseapp.com",
+      databaseURL: "https://ismanyan.firebaseio.com",
+      projectId: "ismanyan",
+      storageBucket: "",
+      messagingSenderId: "196990447745",
+      appId: "1:196990447745:web:4d38c0d4e9cfb87d"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="js/login.js"></script>
+  <script src="js/crud.js"></script>
+
+</body>
+</html>
