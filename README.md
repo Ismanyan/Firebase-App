@@ -1,2 +1,4 @@
 # Firebase-App
-Simple CRUD With Firebase
+Untuk Mengakses admin panel tambahkan /admin pada url
+Email : default@gmail.com
+Password : default123
